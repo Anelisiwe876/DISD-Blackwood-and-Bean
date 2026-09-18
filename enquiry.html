@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackwood &amp; Bean | Enquiry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blackwood & Bean</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="enquiry-intro">
+            <h2>Reservations; Enquiries</h2>
+            <p>Book a table, plan an event with us, or send us a general enquiry — we'll get back to you as soon as we can.</p>
+        </section>
+
+        <section id="reservation">
+            <h2>Reserve a Table</h2>
+            <img src="images/images (2).jpg" style = "width: 200px; height: 200px">
+            <img src="images/images (18).jpg" style = "width: 200px; height: 200px">
+            <img src="images/images (17).jpg" style = "width: 200px; height: 200px">
+            <form id="reservationForm">
+                <label for="resName">Full Name</label>
+                <input type="text" id="resName" name="resName">
+
+                <label for="resEmail">Email</label>
+                <input type="email" id="resEmail" name="resEmail">
+
+                <label for="resPhone">Phone Number</label>
+                <input type="tel" id="resPhone" name="resPhone">
+
+                <label for="resDate">Date</label>
+                <input type="date" id="resDate" name="resDate">
+
+                <label for="resTime">Time</label>
+                <input type="time" id="resTime" name="resTime">
+
+                <label for="resGuests">Number of Guests</label>
+                <input type="number" id="resGuests" name="resGuests" min="1" max="20">
+
+                <label for="resNotes">Special Requests</label>
+                <textarea id="resNotes" name="resNotes" rows="4"></textarea>
+
+                <button type="submit">Book Table</button>
+            </form>
+        </section>
+
+        <section id="event-booking">
+            <h2>Book an Event</h2>
+            <img src="images/images (3).jpg" style = "width: 300px; height: 200px">
+            <img src="images/images (35).jpg" style = "width: 300px; height: 200px">
+            <form id="eventForm">
+                <label for="eventName">Full Name</label>
+                <input type="text" id="eventName" name="eventName">
+
+                <label for="eventEmail">Email</label>
+                <input type="email" id="eventEmail" name="eventEmail">
+
+                <label for="eventPhone">Phone Number</label>
+                <input type="tel" id="eventPhone" name="eventPhone">
+
+                <label for="eventType">Event Type</label>
+                <select id="eventType" name="eventType">
+                    <option value="birthday">Birthday</option>
+                    <option value="corporate">Corporate Function</option>
+                    <option value="private-dining">Private Dining</option>
+                    <option value="celebration">Celebration / Anniversary</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="eventDate">Preferred Date</label>
+                <input type="date" id="eventDate" name="eventDate">
+
+                <label for="eventGuests">Estimated Number of Guests</label>
+                <input type="number" id="eventGuests" name="eventGuests" min="1">
+
+                <label for="eventDetails">Tell Us About Your Event</label>
+                <textarea id="eventDetails" name="eventDetails" rows="4"></textarea>
+
+                <button type="submit">Submit Event Enquiry</button>
+            </form>
+        </section>
+
+        <section id="general-enquiry">
+            <h2>General Enquiry</h2>
+            <form id="enquiryForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="enquiryType">Enquiry Type</label>
+                <select id="enquiryType" name="enquiryType">
+                    <option value="general">General Question</option>
+                    <option value="catering">Catering</option>
+                    <option value="bulk-order">Bulk Order</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="details">Details</label>
+                <textarea id="details" name="details" rows="5"></textarea>
+
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <div class="social-links">
+        <p>Follow Us</p>
+        <ul>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank">TikTok</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2026 Blackwood & Bean. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
