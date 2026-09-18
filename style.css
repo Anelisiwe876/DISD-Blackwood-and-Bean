@@ -1,11 +1,6 @@
-/* --------------------------------------------------------------------------
-   0. Fonts
-   -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap');
 
-/* --------------------------------------------------------------------------
-   1. CSS Reset / Base
-   -------------------------------------------------------------------------- */
+/* 1. CSS Reset / Base */
 *,
 *::before,
 *::after {
@@ -48,13 +43,11 @@ button {
     background: none;
 }
 
-/* --------------------------------------------------------------------------
-   2. Design tokens (colour scheme, type scale, spacing scale)
-   -------------------------------------------------------------------------- */
+/* 2. Design tokens (colour scheme, type scale, spacing scale) */
 :root {
     /* colour scheme */
     --color-blackwood:  #201710;
-    --color-blackwood-2:  #e7b76eea;
+    --color-blackwood-2: #34281d;
     --color-bean:        #6b4226;
     --color-bean-dark:   #4a2d18;
     --color-brass:       #b8863f;
@@ -62,8 +55,8 @@ button {
     --color-parchment:   #f3ecdc;
     --color-cream:       #faf6ec;
     --color-white:       #fffdf9;
-    --color-ink:         #2f241d;
-    --color-line:        rgba(103, 72, 52, 0.18);
+    --color-ink:         #241a14;
+    --color-line:        rgba(36, 26, 20, 0.14);
 
     /* typography scale (type scale ~1.25) */
     --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -94,9 +87,7 @@ button {
     --transition: 0.2s ease;
 }
 
-/* --------------------------------------------------------------------------
-   3. Typography
-   -------------------------------------------------------------------------- */
+/* 3. Typography */
 body {
     font-family: var(--font-body);
     font-size: var(--fs-base);
@@ -136,9 +127,7 @@ main section > h2::after {
     border-radius: 2px;
 }
 
-/* --------------------------------------------------------------------------
-   4. Page shell / layout structure
-   -------------------------------------------------------------------------- */
+/* 4. Page shell / layout structure */
 body {
     display: flex;
     flex-direction: column;
@@ -163,9 +152,7 @@ main section,
     display: none;
 }
 
-/* --------------------------------------------------------------------------
-   5. Header & navigation
-   -------------------------------------------------------------------------- */
+/* 5. Header & navigation */
 header {
     position: sticky;
     top: 0;
@@ -231,9 +218,7 @@ header nav a:active {
     transform: translateY(1px);
 }
 
-/* --------------------------------------------------------------------------
-   6. Hero (home page)
-   -------------------------------------------------------------------------- */
+/* 6. Hero (home page) */
 #hero {
     max-width: none;
     background: linear-gradient(160deg, var(--color-blackwood) 0%, var(--color-bean-dark) 100%);
@@ -265,7 +250,7 @@ header nav a:active {
 
 #hero .hero-content img {
     flex: 1 1 220px;
-    width: 220px;
+    width: 100%;
     height: 220px !important;
     object-fit: cover;
     box-shadow: var(--shadow-md);
@@ -276,9 +261,7 @@ header nav a:active {
     transform: translateY(-4px) scale(1.02);
 }
 
-/* --------------------------------------------------------------------------
-   7. Generic content sections (why-us, mission, hours, etc.)
-   -------------------------------------------------------------------------- */
+/* 7. Generic content sections (why-us, mission, hours, etc.) */
 #why-us,
 #mission,
 #hours {
@@ -308,9 +291,7 @@ header nav a:active {
     color: var(--color-bean);
 }
 
-/* --------------------------------------------------------------------------
-   8. About page — story / team
-   -------------------------------------------------------------------------- */
+/* 8. About page — story / team */
 #our-story {
     display: flex;
     flex-wrap: wrap;
@@ -369,9 +350,7 @@ header nav a:active {
     border-radius: 50%;
 }
 
-/* --------------------------------------------------------------------------
-   9. Menu page — intro banner, image strips, tables
-   -------------------------------------------------------------------------- */
+/* 9. Menu page — intro banner, image strips, tables */
 #menu-intro {
     text-align: center;
     background-color: var(--color-blackwood);
@@ -437,9 +416,7 @@ table th:last-child {
     white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   10. Forms — shared across reservation, event, general enquiry, contact
-   -------------------------------------------------------------------------- */
+/* 10. Forms — shared across reservation, event, general enquiry, contact */
 form {
     display: grid;
     grid-template-columns: 160px 1fr;
@@ -521,9 +498,7 @@ form button:active {
     box-shadow: none;
 }
 
-/* --------------------------------------------------------------------------
-   11. Contact page specifics
-   -------------------------------------------------------------------------- */
+/* 11. Contact page specifics */
 #location {
     display: flex;
     flex-wrap: wrap;
@@ -544,9 +519,7 @@ form button:active {
     line-height: 1.9;
 }
 
-/* --------------------------------------------------------------------------
-   12. Footer
-   -------------------------------------------------------------------------- */
+/* 12. Footer */
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -593,11 +566,9 @@ footer > p {
     opacity: 0.75;
 }
 
-/* ==========================================================================
-   13. Responsive Design — breakpoints for tablet and mobile
-   ========================================================================== */
+/* 13. Responsive Design — breakpoints for tablet and mobile */
 
-/* ---- Tablet (<=1024px): tighten spacing/type, keep multi-column layouts ---- */
+/* Tablet (<=1024px): tighten spacing/type, keep multi-column layouts */
 @media (max-width: 1024px) {
     :root {
         --fs-3xl: 2.5rem;
@@ -618,7 +589,7 @@ footer > p {
     }
 }
 
-/* ---- Mobile (<=640px): single-column layout, stacked nav, fluid images ---- */
+/* Mobile (<=640px): single-column layout, stacked nav, fluid images */
 @media (max-width: 640px) {
     :root {
         --fs-3xl: 2rem;
@@ -649,15 +620,15 @@ footer > p {
     /* force every image — including the ones with inline width/height from
        Part 1 — to shrink to fit small screens instead of overflowing */
     img {
-        width: 100%;
-        height: auto;
-        max-width: 100% ;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
     }
 
     #team > img,
     #team article img {
-        width: 120px ;
-        height: 120px ;
+        width: 120px !important;
+        height: 120px !important;
     }
 
     #our-story,
